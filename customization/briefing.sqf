@@ -6,7 +6,6 @@ switch (side player) do {
     {
 	
 		NEWTAB("Course Notes:")
-		<br/>- Each Course (FTOps, FTP1 and FTP2) have their own distinct form up area. Follow the signs.
 		<br/>- All Participants have damage enabled.
 		<br/>- Players will respawn with their initial gear at the indicated respawn position.
 		<br/>- When respawning, wait for orders at the respawn position.
@@ -19,8 +18,6 @@ switch (side player) do {
 		<br/>
 		<br/> SR 1 Block 1 - 1`1 FT Alpha
 		<br/> SR 1 Block 2 - 1`1 FT Bravo
-		<br/> SR 2 Block 1 - 1`2 FT Alpha
-		<br/> SR 2 Block 2 - 1`2 FT Bravo
 		<br/> SR 3 Block 1 - Instructors
 		<br/>
 		<br/><font size='14'>Long Range Radio Nets:</font> 
@@ -99,7 +96,6 @@ switch (side player) do {
 
 		NEWTAB("Game Mastering")
 		<br/> This mission is not designed for game mastering and should only be manipulated for technical, administrative or diagnostic purposes.
-		<br/> Please DO NOT go into zeus, unless you REALLY have to.
 		ENDTAB;
  
 DISPLAYBRIEFING();
