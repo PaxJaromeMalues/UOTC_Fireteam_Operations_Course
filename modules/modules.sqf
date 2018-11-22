@@ -17,7 +17,7 @@
 #include "start_on_safe\root.sqf"
 
 //UOTC MODULES
-//#include "slidesystem\root.sqf"
+#include "slidesystem\root.sqf"
 //#include "teleportpole\root.sqf"
 //#include "interact_generator\root.sqf"
 

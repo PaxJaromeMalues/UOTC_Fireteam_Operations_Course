@@ -14,8 +14,8 @@ if (!isDedicated) then {
 			curSlideB1 = 1;
 			
 			//board addAction
-			screen1 addAction ["Next Slide", "modules\slidesystem\changeSlide.sqf", "Next"];
-			screen1 addAction ["Previous Slide", "modules\slidesystem\changeSlide.sqf", "Back"];
+			board1 addAction ["Next Slide", "modules\slidesystem\changeSlide.sqf", "Next"];
+			board1 addAction ["Previous Slide", "modules\slidesystem\changeSlide.sqf", "Back"];
 	
 		};
     
