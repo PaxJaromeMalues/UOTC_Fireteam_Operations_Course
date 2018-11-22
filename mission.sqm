@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5664.5889,341.44876,6997.9463};
-		dir[]={-0.58292443,-0.39032471,0.71280742};
-		up[]={-0.2472145,0.92054468,0.30229473};
-		aside[]={0.77421123,4.5902561e-007,0.6331377};
+		pos[]={5665.4375,341.44876,6993.3623};
+		dir[]={-0.78828442,-0.44544914,0.42476407};
+		up[]={-0.39228976,0.89516675,0.21138209};
+		aside[]={0.47442681,7.3097181e-007,0.88044608};
 	};
 };
 binarizationWanted=0;
@@ -2679,7 +2679,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="call{this setVariable[""isInstructor"", true];" \n "[this, ""uotc_loadout_west_TI"", ""Instructors 1'1""] call FNC_GearScript;" \n "[this, ""ACRE_PRC343"", 1] call FNC_SetRadio;" \n "[this, ""ACRE_PRC148"", 1] call FNC_SetRadio;" \n "[this, ""ACRE_PRC152"", 99] call FNC_SetRadio;}";
+						init="call{this setVariable[""isInstructor"", true];" \n "[this, ""uotc_loadout_west_TI"", ""Instructors 1'1""] call FNC_GearScript;" \n "[this, ""ACRE_PRC343"", 3] call FNC_SetRadio;" \n "[this, ""ACRE_PRC152"", 99] call FNC_SetRadio;}";
 						name="CI";
 						description="Chief Instructor@1'1";
 						isPlayable=1;
@@ -2916,7 +2916,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="call{this setVariable[""isInstructor"", true];" \n "[this, ""uotc_loadout_west_TI"", ""Instructors 1'1""] call FNC_GearScript;" \n "[this, ""ACRE_PRC343"", 1] call FNC_SetRadio;" \n "[this, ""ACRE_PRC148"", 1] call FNC_SetRadio;" \n "[this, ""ACRE_PRC152"", 99] call FNC_SetRadio;}";
+						init="call{this setVariable[""isInstructor"", true];" \n "[this, ""uotc_loadout_west_TI"", ""Instructors 1'1""] call FNC_GearScript;" \n "[this, ""ACRE_PRC343"", 3] call FNC_SetRadio;" \n "[this, ""ACRE_PRC152"", 99] call FNC_SetRadio;}";
 						name="TI2";
 						description="Training Instructor";
 						isPlayable=1;
@@ -3153,7 +3153,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="call{this setVariable[""isInstructor"", true];" \n "[this, ""uotc_loadout_west_TI"", ""Instructors 1'1""] call FNC_GearScript;" \n "[this, ""ACRE_PRC343"", 1] call FNC_SetRadio;" \n "[this, ""ACRE_PRC148"", 1] call FNC_SetRadio;" \n "[this, ""ACRE_PRC152"", 99] call FNC_SetRadio;}";
+						init="call{this setVariable[""isInstructor"", true];" \n "[this, ""uotc_loadout_west_TI"", ""Instructors 1'1""] call FNC_GearScript;" \n "[this, ""ACRE_PRC343"", 3] call FNC_SetRadio;" \n "[this, ""ACRE_PRC152"", 99] call FNC_SetRadio;}";
 						name="TI1";
 						description="Training Instructor";
 						isPlayable=1;
@@ -3437,14 +3437,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5655.3247,335.61752,7005.0552};
-						angles[]={0,0.82516271,0};
+						position[]={5655.3252,335.61749,7005.0547};
+						angles[]={0,0.82515675,0};
 					};
 					side="West";
 					flags=7;
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="call{[this, ""uotc_loadout_west_FTL"", ""1'1'A""] call FNC_GearScript;" \n "[this, ""ACRE_PRC343"", 1] call FNC_SetRadio;}";
 						description="Fireteam Leader@1'1'A";
 						isPlayable=1;
 						class Inventory
@@ -3677,14 +3678,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5654.4556,335.61786,7005.939};
-						angles[]={0,0.80220068,0};
+						position[]={5654.4561,335.61786,7005.939};
+						angles[]={0,0.80220568,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
 						skill=0.40000001;
+						init="call{[this, ""uotc_loadout_west_AR"", ""1'1'A""] call FNC_GearScript;" \n "[this, ""ACRE_PRC343"", 1] call FNC_SetRadio;}";
 						description="Automatic Rifleman";
 						isPlayable=1;
 						class Inventory
@@ -3902,14 +3904,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5652.4341,335.70703,7004.1865};
-						angles[]={0,0.80220068,0};
+						position[]={5652.4341,335.70703,7004.187};
+						angles[]={0,0.80220568,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
 						skill=0.40000001;
+						init="call{[this, ""uotc_loadout_west_GRN"", ""1'1'A""] call FNC_GearScript;" \n "[this, ""ACRE_PRC343"", 1] call FNC_SetRadio;}";
 						description="Grenadier";
 						isPlayable=1;
 						class Inventory
@@ -4102,14 +4105,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5653.4004,335.70898,7003.1035};
-						angles[]={0,0.80220068,0};
+						position[]={5653.3999,335.70898,7003.104};
+						angles[]={0,0.80220568,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
 						skill=0.40000001;
+						init="call{[this, ""uotc_loadout_west_RMAT"", ""1'1'A""] call FNC_GearScript;" \n "[this, ""ACRE_PRC343"", 1] call FNC_SetRadio;}";
 						description="Rifleman AT";
 						isPlayable=1;
 						class Inventory
@@ -4385,13 +4389,14 @@ class Mission
 					class PositionInfo
 					{
 						position[]={5659.1831,335.58649,7002.4009};
-						angles[]={0,0.69779974,0};
+						angles[]={0,0.69780004,0};
 					};
 					side="West";
 					flags=7;
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="call{[this, ""uotc_loadout_west_FTL"", ""1'1'B""] call FNC_GearScript;" \n "[this, ""ACRE_PRC343"", 1] call FNC_SetRadio;}";
 						description="Fireteam Leader@1'1'B";
 						isPlayable=1;
 						class Inventory
@@ -4625,13 +4630,14 @@ class Mission
 					class PositionInfo
 					{
 						position[]={5658.311,335.58514,7003.3608};
-						angles[]={0,0.69996727,0};
+						angles[]={0,0.69996428,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
 						skill=0.40000001;
+						init="call{[this, ""uotc_loadout_west_AR"", ""1'1'B""] call FNC_GearScript;" \n "[this, ""ACRE_PRC343"", 1] call FNC_SetRadio;}";
 						description="Automatic Rifleman";
 						isPlayable=1;
 						class Inventory
@@ -4849,14 +4855,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5657.4346,335.67368,7000.4526};
-						angles[]={0,0.75729859,0};
+						position[]={5657.4351,335.67365,7000.4526};
+						angles[]={0,0.75729835,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
 						skill=0.40000001;
+						init="call{[this, ""uotc_loadout_west_GRN"", ""1'1'B""] call FNC_GearScript;" \n "[this, ""ACRE_PRC343"", 1] call FNC_SetRadio;}";
 						description="Grenadier";
 						isPlayable=1;
 						class Inventory
@@ -5049,14 +5056,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5656.5215,335.67526,7001.3286};
-						angles[]={0,0.75262856,0};
+						position[]={5656.521,335.67526,7001.3286};
+						angles[]={0,0.75262088,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
 						skill=0.40000001;
+						init="call{[this, ""uotc_loadout_west_RMAT"", ""1'1'B""] call FNC_GearScript;" \n "[this, ""ACRE_PRC343"", 1] call FNC_SetRadio;}";
 						description="Rifleman AT";
 						isPlayable=1;
 						class Inventory
@@ -6476,6 +6484,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				name="board1";
 			};
 			id=319;
 			type="Land_Billboard_F";

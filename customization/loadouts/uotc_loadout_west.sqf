@@ -37,7 +37,6 @@ END_GROUP;
 
 SET_GROUP(radios)
 	["ACRE_PRC343",1,"vest"] call FNC_AddItem;
-	["ACRE_PRC148",1,"vest"] call FNC_AddItem;
 	["ACRE_PRC152",1,"vest"] call FNC_AddItem;
 END_GROUP;
 
@@ -51,9 +50,7 @@ SET_GROUP(sidearm_all)
 END_GROUP;
 
 SET_GROUP(primary)
-	["rhs_weap_m4a1_blockII_d"] call FNC_AddItem;
-	["rhsusf_acc_SF3P556"] call FNC_AddItem;
-	["rhsusf_acc_M952V"] call FNC_AddItem;
+	["rhs_weap_m4a1_blockII"] call FNC_AddItem;
 	["rhsusf_acc_SF3P556"] call FNC_AddItem;
 	["rhsusf_acc_M952V"] call FNC_AddItem;
 	["rhsusf_acc_ACOG3"] call FNC_AddItem;
@@ -96,7 +93,7 @@ case (package + "FTL"): {
 	
 	ADD_GROUP(sidearm_all);
 	
-	["rhs_weap_m4a1_blockII_d"] call FNC_AddItem; //Primary rifle
+	["rhs_weap_m4a1_blockII"] call FNC_AddItem; //Primary rifle
 	["rhsusf_acc_ACOG_3d"] call FNC_AddItem; //Red dot sight
 	["rhsusf_acc_SFMB556"] call FNC_AddItem;
 	["rhsusf_acc_anpeq16a_light"] call FNC_AddItem;
@@ -117,7 +114,7 @@ case (package + "AR"): {
 	ADD_GROUP(sidearm_all);
 	
 	["rhs_weap_m249_pip_S_para"] call FNC_AddItem; //Primary rifle
-	["rhsusf_acc_compm4"] call FNC_AddItem; //Red dot sight
+	["rhsusf_acc_ELCAN"] call FNC_AddItem; //Red dot sight
 	["ACE_muzzle_mzls_L"] call FNC_AddItem;
 	["rhsusf_acc_M952V"] call FNC_AddItem;
 	["rhsusf_200Rnd_556x45_mixed_soft_pouch",5] call FNC_AddItem; //Magazines
@@ -134,7 +131,7 @@ case (package + "GRN"): {
 	ADD_GROUP(radios_pt);
 	ADD_GROUP(sidearm_all);
 	
-	["rhs_weap_m4a1_m203s_d"] call FNC_AddItem; //Primary rifle
+	["rhs_weap_m4a1_m320"] call FNC_AddItem; //Primary rifle
 	["rhsusf_acc_compm4"] call FNC_AddItem; //Red dot sight
 	["rhsusf_acc_SFMB556"] call FNC_AddItem;
 	["rhsusf_acc_anpeq16a_light"] call FNC_AddItem;
@@ -163,7 +160,7 @@ case (package + "RMAT"): {
 	["rhs_weap_m72a7"] call FNC_AddItem;
 	["rhs_m72a7_mag",1,"vest"] call FNC_AddItem;
 	
-	["rhs_weap_m4a1_d_mstock_grip"] call FNC_AddItem; //Primary rifle
+	["rhs_weap_m4a1_mstock_grip"] call FNC_AddItem; //Primary rifle
 	["rhsusf_acc_compm4"] call FNC_AddItem; //Red dot sight
 	["rhsusf_acc_SFMB556"] call FNC_AddItem;
 	["rhsusf_acc_anpeq16a_light"] call FNC_AddItem;
