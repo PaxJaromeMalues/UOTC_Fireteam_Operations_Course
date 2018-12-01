@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5078.3604,115.30953,4772.4619};
-		dir[]={0.65336484,-0.37697858,-0.65655184};
-		up[]={0.2659184,0.92620939,-0.26721638};
-		aside[]={-0.70884508,3.5695848e-007,-0.70540041};
+		pos[]={5094.6338,97.402,4208.8745};
+		dir[]={0.53507578,-0.42375335,-0.73096305};
+		up[]={0.25033817,0.90571964,-0.3419866};
+		aside[]={-0.80698723,-1.8149003e-006,-0.59072715};
 	};
 };
 binarizationWanted=0;
@@ -1571,8 +1571,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4980.0039,124.18412,4817.75};
-				angles[]={0,2.195554,-0};
+				position[]={4963.2974,128.36426,4829.3013};
+				angles[]={0,2.195554,0};
 			};
 			side="Empty";
 			flags=4;
@@ -1581,6 +1581,7 @@ class Mission
 			};
 			id=98;
 			type="Land_Noticeboard_F";
+			atlOffset=-0.092926025;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6909,7 +6910,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4867.1958,165.3759,4951.8696};
-				angles[]={0,3.0700719,-0};
+				angles[]={0,3.0700719,0};
 			};
 			side="Empty";
 			flags=4;
@@ -6989,7 +6990,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5134.417,84.826843,4590.6616};
-				angles[]={0,3.4766624,-0};
+				angles[]={0,3.4766624,0};
 			};
 			side="Empty";
 			flags=4;
@@ -7030,7 +7031,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5103.645,88.158234,4187.6499};
+				position[]={5100.6929,88.131668,4194.8364};
 				angles[]={0,2.4663596,0};
 			};
 			side="Empty";
@@ -7041,7 +7042,7 @@ class Mission
 			};
 			id=353;
 			type="Land_Noticeboard_F";
-			atlOffset=0.035003662;
+			atlOffset=-0.077796936;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7089,7 +7090,7 @@ class Mission
 			fillName="Border";
 			a=7.288424;
 			b=10.364861;
-			angle=117.77673;
+			angle=117.77672;
 			drawBorder=1;
 			id=355;
 			atlOffset=0.1566925;
