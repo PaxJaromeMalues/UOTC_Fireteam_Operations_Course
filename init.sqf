@@ -5,12 +5,12 @@
 #include "customization\settings.sqf" //DO NOT REMOVE
 #include "core\dia\debug\dia_debug.sqf" //DO NOT REMOVE
 
-#include "customization\addAction.sqf" //gives the CI the 'reveal arrows' option
-
 if (isServer) then {
 
 	"hide" execVM "customization\arrows.sqf";
-
+	
+	"init" [500,initCenter] execVM "customization\popups.sqf";
+	
 	"" call FNC_StartingCount; //DO NOT REMOVE
 
 	[] spawn { //Spawns code running in parallel

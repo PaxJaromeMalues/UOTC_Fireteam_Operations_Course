@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1546;
+	toggles=1537;
 	class ItemIDProvider
 	{
-		nextID=360;
+		nextID=365;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5152.6162,109.02151,4602.3423};
-		dir[]={-0.70713657,-0.56605858,-0.42380485};
-		up[]={-0.48555332,0.82434577,-0.29100314};
-		aside[]={-0.51408881,-1.559747e-007,0.85778433};
+		pos[]={5037.3213,119.55135,4786.5068};
+		dir[]={0.6338436,-0.38972384,-0.66825932};
+		up[]={0.26826662,0.920856,-0.28283229};
+		aside[]={-0.72562695,-9.383657e-007,-0.68825471};
 	};
 };
 binarizationWanted=0;
@@ -401,7 +401,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=174;
+		items=179;
 		class Item0
 		{
 			dataType="Marker";
@@ -1373,7 +1373,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="call{this addAction [""<t color='#FF0000'>Hide Arrows"", {0 = [20, arrowMarkers] execVM ""hideArrows.sqf""}];this addAction [""<t color='#00FF00'>Reveal Arrows"", {0 = [20, arrowMarkers] execVM ""revealArrows.sqf""}];}";
+				init="call{if (player getVariable ""isInstructor"") then { " \n " " \n " waitUntil { " \n "  (player == player) " \n " }; " \n " [] spawn { " \n "  sleep 0.01; " \n "  _x addAction [""<t color='#FF0000'>Reveal Arrows"",{""reveal"" execVM ""customization\arrows.sqf"";}]; " \n "  _x addAction [""<t color='#FF0000'>Hide Arrows"",{""hide"" execVM ""customization\arrows.sqf"";}]; " \n " }; " \n "};}";
 			};
 			id=101;
 			type="Land_Noticeboard_F";
@@ -1692,8 +1692,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5093.2695,85.223763,4604.4556};
-				angles[]={0,5.7217956,0};
+				position[]={5013.9399,88.430298,4606.4629};
+				angles[]={0,2.0735793,0};
 			};
 			side="Empty";
 			flags=5;
@@ -1708,8 +1708,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5079.562,85.038757,4595.626};
-				angles[]={0,5.7217956,0};
+				position[]={5021.6411,89.658615,4620.8345};
+				angles[]={0,2.0735793,0};
 			};
 			side="Empty";
 			flags=5;
@@ -1724,8 +1724,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5066.1479,85.03363,4587.2314};
-				angles[]={0,5.7217956,0};
+				position[]={5029.2969,90.622879,4634.6836};
+				angles[]={0,2.0735793,0};
 			};
 			side="Empty";
 			flags=5;
@@ -1740,8 +1740,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5052.5625,85.043968,4578.5444};
-				angles[]={0,5.7217956,0};
+				position[]={5036.9604,92.038795,4648.8716};
+				angles[]={0,2.0735793,0};
 			};
 			side="Empty";
 			flags=5;
@@ -1756,8 +1756,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5039.2603,85.017754,4570.0454};
-				angles[]={0,5.7217956,0};
+				position[]={5044.4678,94.928246,4662.7573};
+				angles[]={0,2.0735793,0};
 			};
 			side="Empty";
 			flags=5;
@@ -7243,6 +7243,81 @@ class Mission
 				};
 				nAttributes=8;
 			};
+		};
+		class Item174
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={5162.9839,84.540245,4450.54};
+			};
+			name="initCenter";
+			id=360;
+			type="Logic";
+		};
+		class Item175
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5014.1279,87.191429,4591.1162};
+				angles[]={0,1.2704221,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=361;
+			type="Land_PlasticNetFence_01_long_F";
+		};
+		class Item176
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5021.4614,85.827263,4576.4556};
+				angles[]={0,1.2704221,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=362;
+			type="Land_PlasticNetFence_01_long_F";
+		};
+		class Item177
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5028.0928,84.786194,4559.2324};
+				angles[]={0,1.2704221,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=363;
+			type="Land_PlasticNetFence_01_long_F";
+		};
+		class Item178
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5035.9321,83.892761,4537.9033};
+				angles[]={0,1.2704221,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=364;
+			type="Land_PlasticNetFence_01_long_F";
 		};
 	};
 };
