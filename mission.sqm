@@ -8,7 +8,7 @@ class EditorData
 	toggles=1546;
 	class ItemIDProvider
 	{
-		nextID=359;
+		nextID=360;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5659.3286,350.19058,6984.6763};
-		dir[]={0.13109004,-0.55975038,0.81835842};
-		up[]={0.088547617,0.8285808,0.55275595};
-		aside[]={0.98752671,-1.1897064e-006,-0.15818998};
+		pos[]={5654.165,592.56604,6886.8813};
+		dir[]={-0.072533019,-0.53575122,-0.84138286};
+		up[]={-0.04602322,0.84429288,-0.53382879};
+		aside[]={-0.99642026,-1.310369e-006,0.085899621};
 	};
 };
 binarizationWanted=0;
@@ -71,7 +71,8 @@ addons[]=
 	"ace_cargo",
 	"A3_Misc_F_Helpers",
 	"A3_Structures_F_Mark_Training",
-	"A3_Structures_F_Exp_Military_Fortifications"
+	"A3_Structures_F_Exp_Military_Fortifications",
+	"A3_Modules_F_Multiplayer"
 };
 class AddonsMetaData
 {
@@ -400,7 +401,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=173;
+		items=174;
 		class Item0
 		{
 			dataType="Marker";
@@ -7132,6 +7133,116 @@ class Mission
 			id=358;
 			type="Land_BagBunker_01_small_green_F";
 			atlOffset=0.00039672852;
+		};
+		class Item173
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4811.646,194.1862,5049.0742};
+			};
+			name="fw_west_respawn";
+			id=359;
+			type="ModuleRespawnPosition_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleRespawnPosition_F_Marker";
+					expression="_this setVariable ['Marker',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="0";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleRespawnPosition_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleRespawnPosition_F_Side";
+					expression="_this setVariable ['Side',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleRespawnPosition_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="1";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleRespawnPosition_F_Type";
+					expression="_this setVariable ['Type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="0";
+						};
+					};
+				};
+				nAttributes=5;
+			};
 		};
 	};
 };
