@@ -1,11 +1,11 @@
 ///////////////////////////////////////////////////////////////////////////
 //Script to be called by inits or scripts for managing popuptargets around
 //a specific game logic
-//Call as: "reveal" [radius,centerObject] execVM "customization\arrows.sqf";
+//Call as: [switchcase,radius,centerObject] execVM "customization\arrows.sqf";
+//By Pax
 ///////////////////////////////////////////////////////////////////////////
-params [["_dist",50,[1]],["_center",player,[objNull]]];
+params ["_execution",["_dist",50,[1]],["_center",player,[objNull]]];
 
-_execution = _this;
 _targets = nearestObjects [position _center, ["TargetBase"], _dist];
 _SwivelTargets = nearestObjects [position _center, ["Target_Swivel_01_base_F"], _dist];
 
