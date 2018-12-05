@@ -7,7 +7,7 @@
 
 if (isServer) then {
 
-	"init" execVM "customization\arrows.sqf";
+	"hide" execVM "customization\arrows.sqf";
 
 	"" call FNC_StartingCount; //DO NOT REMOVE
 
