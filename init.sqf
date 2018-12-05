@@ -7,6 +7,8 @@
 
 if (isServer) then {
 
+	"init" execVM "customization\arrows.sqf";
+
 	"" call FNC_StartingCount; //DO NOT REMOVE
 
 	[] spawn { //Spawns code running in parallel
