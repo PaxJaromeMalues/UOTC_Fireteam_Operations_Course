@@ -5,6 +5,8 @@
 #include "customization\settings.sqf" //DO NOT REMOVE
 #include "core\dia\debug\dia_debug.sqf" //DO NOT REMOVE
 
+#include "customization\addAction.sqf" //gives the CI the 'reveal arrows' option
+
 if (isServer) then {
 
 	"hide" execVM "customization\arrows.sqf";
