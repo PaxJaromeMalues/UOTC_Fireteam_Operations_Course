@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5037.3213,119.55135,4786.5068};
-		dir[]={0.6338436,-0.38972384,-0.66825932};
-		up[]={0.26826662,0.920856,-0.28283229};
-		aside[]={-0.72562695,-9.383657e-007,-0.68825471};
+		pos[]={5151.4624,107.73338,4513.7344};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -1373,7 +1373,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="call{if (player getVariable ""isInstructor"") then { " \n " " \n " waitUntil { " \n "  (player == player) " \n " }; " \n " [] spawn { " \n "  sleep 0.01; " \n "  _x addAction [""<t color='#FF0000'>Reveal Arrows"",{""reveal"" execVM ""customization\arrows.sqf"";}]; " \n "  _x addAction [""<t color='#FF0000'>Hide Arrows"",{""hide"" execVM ""customization\arrows.sqf"";}]; " \n " }; " \n "};}";
+				name="conrepboard";
 			};
 			id=101;
 			type="Land_Noticeboard_F";
@@ -1890,7 +1890,6 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="call{this addAction [""<t color='#00FF00'>Reset Trench Targets"", {0 = [20, grnTgts] execVM ""resetRaised.sqf""}];this addAction [""<t color='#FF0000'>Lower Trench Targets"", {0 = [20, grnTgts] execVM ""resetLowered.sqf""}];}";
 				name="grnBoard";
 			};
 			id=164;
@@ -6689,19 +6688,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5137.4409,85.404633,4595.3984};
-				angles[]={0,3.4766624,0};
+				position[]={5137.4409,85.404861,4595.3979};
+				angles[]={0,3.476661,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="call{this addAction [""<t color='#00FF00'>Reset Bunker Targets"", {0 = [20, bnkTgts] execVM ""resetRaised.sqf""}];this addAction [""<t color='#FF0000'>Lower Bunker Targets"", {0 = [20, bnkTgts] execVM ""resetLowered.sqf""}];}";
-				name="grnBoard_1";
+				name="arBoard";
 			};
 			id=352;
 			type="Land_Billboard_F";
-			atlOffset=-0.21625519;
+			atlOffset=-0.21600342;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6731,18 +6729,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5100.6929,88.131668,4194.8364};
+				position[]={5100.6929,88.131454,4194.8359};
 				angles[]={0,2.4663596,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="call{this addAction [""<t color='#00FF00'>Reset Building Targets"", {0 = [20, hseTgts] execVM ""reset.sqf""}];this addAction [""<t color='#FF0000'>Lower Building Targets"", {0 = [20, hseTgts] execVM ""resetLowered.sqf""}];}";
+				name="bldBoard";
 			};
 			id=353;
 			type="Land_Noticeboard_F";
-			atlOffset=-0.077796936;
+			atlOffset=-0.07800293;
 			class CustomAttributes
 			{
 				class Attribute0
