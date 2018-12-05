@@ -15,11 +15,11 @@ if (isServer) then {
   switch (_execution) do {
     case "hide": {
 		if (count _arrows < 1) exitWith {};
-		{_x hideObject true;} forEach _arrows;
+		{_x hideObjectGlobal true;} forEach _arrows;
     };
     case "reveal": {
 		if (count _arrows < 1) exitWith {};
-		{_x hideObject false;} forEach _arrows;
+		{_x hideObjectGlobal false;} forEach _arrows;
 		systemChat "Arrows are now revealed";
     };
   };
