@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5069.1084,91.308174,4219.9106};
-		dir[]={0.67105234,-0.39859718,0.62534058};
-		up[]={0.29181126,0.9168784,0.27192867};
-		aside[]={0.68183446,-5.8194564e-007,-0.73169434};
+		pos[]={5057.583,103.10699,4227.957};
+		dir[]={0.79923666,-0.60109842,-0.011864569};
+		up[]={0.60121232,0.79888946,-0.0089283809};
+		aside[]={-0.014857342,2.2359586e-006,-1.0000267};
 	};
 };
 binarizationWanted=0;
@@ -1570,7 +1570,7 @@ class Mission
 			name="marker_23";
 			type="mil_arrow2";
 			colorName="ColorBlue";
-			angle=234.94969;
+			angle=234.94968;
 			id=113;
 			atlOffset=-0.6989212;
 		};
@@ -7828,7 +7828,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5078.7715,84.352623,4226.0859};
+				position[]={5078.7715,84.352493,4226.0859};
 				angles[]={6.1716413,0,0.14379768};
 			};
 			side="Empty";
@@ -7838,6 +7838,7 @@ class Mission
 			};
 			id=402;
 			type="ACE_Box_Ammo";
+			atlOffset=-0.0039978027;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7855,7 +7856,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[""rhs_mag_m69""],[24]],[[],[]],[[],[]]],false]";
+							value="[[[[],[]],[[""rhs_mag_m67""],[24]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
@@ -7877,6 +7878,7 @@ class Mission
 			};
 			id=403;
 			type="ACE_Box_Ammo";
+			atlOffset=-2.2888184e-005;
 			class CustomAttributes
 			{
 				class Attribute0
