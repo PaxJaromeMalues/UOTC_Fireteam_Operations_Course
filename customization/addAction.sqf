@@ -10,6 +10,8 @@ if (!isDedicated) then {
 			grnBoard addAction ["<t color='#FF0000'>Lower Trench Targets",{["reset",15,grnTgts] execVM "customization\popups.sqf";}];
 			bldBoard addAction ["<t color='#FF0000'>Raise House Targets",{["setup",15,hseTgts] execVM "customization\popups.sqf";}];
 			bldBoard addAction ["<t color='#FF0000'>Lower House Targets",{["reset",15,hseTgts] execVM "customization\popups.sqf";}];
+			grnPraBoard addAction ["<t color='#FF0000'>Raise Practice Targets",{["setup",2,grnPraTgts] execVM "customization\popups.sqf";}];
+			grnPraBoard addAction ["<t color='#FF0000'>Lower Practice Targets",{["reset",2,grnPraTgts] execVM "customization\popups.sqf";}];
 		};
 	};
 };
