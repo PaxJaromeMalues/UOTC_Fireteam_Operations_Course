@@ -388,7 +388,7 @@ class AddonsMetaData
 randomSeed=15218215;
 class ScenarioData
 {
-	author="ThePieSpy";
+	author="ThePieSpy & PaxJaromeMalues";
 	respawnDialog=0;
 	disabledAI=1;
 	respawn=3;
