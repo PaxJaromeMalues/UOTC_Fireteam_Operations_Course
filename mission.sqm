@@ -8,7 +8,7 @@ class EditorData
 	toggles=1545;
 	class ItemIDProvider
 	{
-		nextID=469;
+		nextID=470;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5676.187,350.20758,7001.3877};
-		dir[]={-0.59024233,-0.5015555,-0.63267547};
-		up[]={-0.34219709,0.86500639,-0.36679718};
-		aside[]={-0.73128551,-6.7052315e-007,0.68225241};
+		pos[]={5081.9595,99.377342,4217.7549};
+		dir[]={0.72610801,-0.42033243,-0.54420549};
+		up[]={0.33637872,0.90734524,-0.25211054};
+		aside[]={-0.59975451,-1.4209945e-007,-0.80022347};
 	};
 };
 binarizationWanted=0;
@@ -4466,7 +4466,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=258;
+		items=259;
 		class Item0
 		{
 			dataType="Marker";
@@ -12878,6 +12878,45 @@ class Mission
 			};
 			id=468;
 			type="Flag_White_F";
+		};
+		class Item258
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5066.521,84.534355,4223.5952};
+				angles[]={0,2.3246562,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=469;
+			type="Land_Billboard_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="slides\board2\slideB1.jpg";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 };
