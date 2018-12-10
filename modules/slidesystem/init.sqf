@@ -11,7 +11,7 @@ if (!isDedicated) then {
 			sleep 0.01;
 
 			//Current Slide values for boards
-			curSlideB1 = 1;
+			curSlideBoard1 = 1;
 			
 			//board addAction
 			board1 addAction ["Next Slide", "modules\slidesystem\changeSlide.sqf", "Next"];
