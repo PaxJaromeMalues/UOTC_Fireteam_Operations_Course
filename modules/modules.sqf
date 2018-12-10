@@ -18,7 +18,7 @@
 
 //UOTC MODULES
 #include "slidesystem\root.sqf"
-//#include "teleportpole\root.sqf"
+#include "teleportpole\root.sqf"
 //#include "interact_generator\root.sqf"
 
 //Additional modules that can be enabled by removing the //
