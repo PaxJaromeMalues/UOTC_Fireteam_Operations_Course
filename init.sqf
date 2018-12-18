@@ -11,7 +11,7 @@ if (isServer) then {
 
 	"hide" execVM "customization\arrows.sqf";
 	
-	["init",500,initCenter] execVM "customization\popups.sqf";
+	["false","init",500,initCenter] execVM "customization\popups.sqf";
 	
 	"" call FNC_StartingCount; //DO NOT REMOVE
 
