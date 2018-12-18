@@ -10,8 +10,8 @@
 if (isServer) then {
 
 	"hide" execVM "customization\arrows.sqf";
-	
-	["false","init",500,initCenter] execVM "customization\popups.sqf";
+
+	[false,"init",500,initCenter] remoteExec ["Fnc_popup", 2];
 	
 	"" call FNC_StartingCount; //DO NOT REMOVE
 

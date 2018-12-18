@@ -1,4 +1,10 @@
-params ["_popenabled","_execution",["_dist",50,[1]],["_center",player,[objNull]]];
+///////////////////////////////////////////////////////////////////////////////////////////
+//Script to be called by inits or scripts for operating swivel and popup
+//targets around a specified object "_center".
+//params: [ShouldTargetsAutoPop?,WhichSwitchShouldRun?,WhatDistanceFromObject?,WhatObject?]
+//By Pax
+///////////////////////////////////////////////////////////////////////////////////////////
+params [["_popenabled",false,[boolean]],["_execution","init",[string]],["_dist",25,[number]],["_center",initCenter,[objNull]]];
 
 _targets = nearestObjects [position _center, ["TargetBase"], _dist];
 _SwivelTargets = nearestObjects [position _center, ["Target_Swivel_01_base_F"], _dist];
@@ -13,22 +19,24 @@ switch (_execution) do {
 			_x animate ["Terc",1];
 		} forEach _SwivelTargets;
   	};
-    case "setup": {
+	
+	case "setup": {
+		"setup called" remoteExec ["systemChat"];
 		if (count _targets > 0) then {
 			{ _x animate ["Terc",0];
-				playSound3D ["a3\missions_f_beta\data\sounds\firing_drills\target_pop-up_small.wss", _x];
-				if (_popenabled == true) then {
+				if (_popenabled) then {
+					"popup first condition" remoteExec ["systemChat"];
 					_x addEventHandler [
 						"Hit", {
 							(_this select 0) animate ["Terc",1];
 							[{
-								playSound3D ["a3\missions_f_beta\data\sounds\firing_drills\target_pop-up_small.wss", (_this select 0)];
 								(_this select 0) animate ["Terc",0];
 							},
 							_this, 1 + (random 4)] call CBA_fnc_waitAndExecute;
 						}
 					]
 				} else {
+					"popup second condition" remoteExec ["systemChat"];
 					_x addEventHandler [
 						"Hit", {
 							(_this select 0) animate ["Terc",1];
@@ -38,25 +46,23 @@ switch (_execution) do {
 				};
 			} forEach _targets;
 		} else {
-			systemChat "No compatible targets were found.";
+			"No compatible targets were found." remoteExec ["systemChat"];
 		};
 		if (count _SwivelTargets > 0) then {
 			{ _x animate ["Terc",0];
-			playSound3D ["a3\missions_f_beta\data\sounds\firing_drills\target_pop-up_small.wss", _x];
-				if (_popenabled == true) then {
-					_x setVariable ["BIS_poppingEnabled", false];
+				if (_popenabled) then {
+					"swivle first condition" remoteExec ["systemChat"];
 					_x addEventHandler [
 						"HitPart", {
 							((_this select 0) select 0) animate ["Terc",1];
 							[{
-								playSound3D ["a3\missions_f_beta\data\sounds\firing_drills\target_pop-up_small.wss", (_this select 0)];
 								((_this select 0) select 0) animate ["Terc",0];
 							},
 							_this, 1 + (random 4)] call CBA_fnc_waitAndExecute;
 						}
 					]
 				} else {
-					_x setVariable ["BIS_poppingEnabled", false];
+					"swivle second condition" remoteExec ["systemChat"];
 					_x addEventHandler [
 						"HitPart", {
 							((_this select 0) select 0) animate ["Terc",1];
@@ -66,20 +72,19 @@ switch (_execution) do {
 				};
 			} forEach _SwivelTargets;
 		} else {
-			systemChat "No compatible swivels were found.";
+			"No compatible Swivels were found." remoteExec ["systemChat"];
 		};
 	};
+	
 	case "reset": {
+		"reset called" remoteExec ["systemChat"];
 		{
 			_x removeEventHandler ["Hit",0];
 			_x animate ["Terc",1];
-			playSound3D ["a3\missions_f_beta\data\sounds\firing_drills\target_pop-down_small.wss", _x];
 		} forEach _targets;
 		{
 			_x animate ["Terc",1];
-			_x setVariable ["BIS_poppingEnabled", false];
 			_x RemoveEventHandler ["HitPart",0];
-			playSound3D ["a3\missions_f_beta\data\sounds\firing_drills\target_pop-down_small.wss", _x];
 		} forEach _SwivelTargets;
 	};
 };
