@@ -17,15 +17,15 @@ switch (_execution) do {
 		if (count _targets > 0) then {
 			{ _x animate ["Terc",0];
 				playSound3D ["a3\missions_f_beta\data\sounds\firing_drills\target_pop-up_small.wss", _x];
-				if (_popenabled) then {
+				if (_popenabled == true) then {
 					_x addEventHandler [
 						"Hit", {
 							(_this select 0) animate ["Terc",1];
-              [{
-              	playSound3D ["a3\missions_f_beta\data\sounds\firing_drills\target_pop-up_small.wss", (_this select 0)];
+							[{
+								playSound3D ["a3\missions_f_beta\data\sounds\firing_drills\target_pop-up_small.wss", (_this select 0)];
 								(_this select 0) animate ["Terc",0];
-              },
-              _this, 1 + (random 4)] call CBA_fnc_waitAndExecute;
+							},
+							_this, 1 + (random 4)] call CBA_fnc_waitAndExecute;
 						}
 					]
 				} else {
@@ -43,16 +43,16 @@ switch (_execution) do {
 		if (count _SwivelTargets > 0) then {
 			{ _x animate ["Terc",0];
 			playSound3D ["a3\missions_f_beta\data\sounds\firing_drills\target_pop-up_small.wss", _x];
-				if (_popenabled) then {
+				if (_popenabled == true) then {
 					_x setVariable ["BIS_poppingEnabled", false];
 					_x addEventHandler [
 						"HitPart", {
 							((_this select 0) select 0) animate ["Terc",1];
 							[{
-                playSound3D ["a3\missions_f_beta\data\sounds\firing_drills\target_pop-up_small.wss", (_this select 0)];
-                ((_this select 0) select 0) animate ["Terc",0];
-              },
-               _this, 1 + (random 4)] call CBA_fnc_waitAndExecute;
+								playSound3D ["a3\missions_f_beta\data\sounds\firing_drills\target_pop-up_small.wss", (_this select 0)];
+								((_this select 0) select 0) animate ["Terc",0];
+							},
+							_this, 1 + (random 4)] call CBA_fnc_waitAndExecute;
 						}
 					]
 				} else {
