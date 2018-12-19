@@ -7,6 +7,13 @@
 
 #include "customization\addAction.sqf" //give instructors control over all popuptargets
 
+if (!isDedicated) then {
+	_localTargets = (entities "Target_Swivel_01_ground_F") + (entities "Land_Target_Swivel_01_F");
+	{
+		_x setVariable ["BIS_exitScript", false];
+	} forEach _localTargets;
+};
+
 if (isServer) then {
 
 	"hide" execVM "customization\arrows.sqf";
