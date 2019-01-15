@@ -7,19 +7,28 @@
 
 #include "customization\addAction.sqf" //give instructors control over all popuptargets
 
+//Following code is apparently necessary to make swivels somewhat working in multiplayer
 if (!isDedicated) then {
-	_localTargets = (entities "Target_Swivel_01_ground_F") + (entities "Land_Target_Swivel_01_F");
 	{
-		_x setVariable ["BIS_exitScript", false];
-	} forEach _localTargets;
+		_x setVariable ["BIS_exitScript", false, true];
+	} forEach entities [
+		["Target_Swivel_01_ground_F", "Land_Target_Swivel_01_F"],[]
+	];
 };
+
+Fnc_popup = compile preprocessFileLineNumbers "customization\popups.sqf";
 
 if (isServer) then {
 
 	"hide" execVM "customization\arrows.sqf";
 
-	[false,"init",500,initCenter] remoteExec ["Fnc_popup", 2];
-	
+//	[false,"init",500,initCenter] remoteExec ["Fnc_popup", 2];
+
+	_nul = [] spawn {
+		waitUntil {time > 0};
+		[] call Fnc_popup;
+	};
+
 	"" call FNC_StartingCount; //DO NOT REMOVE
 
 	[] spawn { //Spawns code running in parallel
