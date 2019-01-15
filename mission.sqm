@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5169.1748,121.05779,4599.8481};
-		dir[]={-0.63430834,-0.41244447,-0.65403217};
-		up[]={-0.28719604,0.91087133,-0.29613072};
-		aside[]={-0.71793723,-1.65042e-006,0.69627196};
+		pos[]={5161.1318,98.324776,4578.2603};
+		dir[]={-0.92791992,-0.35085657,-0.1268723};
+		up[]={-0.34772155,0.93631101,-0.047547176};
+		aside[]={-0.13550179,-9.1412949e-007,0.9909066};
 	};
 };
 binarizationWanted=0;
@@ -417,6 +417,24 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -431,24 +449,6 @@ class CustomAttributes
 						};
 					};
 					value=0;
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
 				};
 			};
 		};
@@ -10548,7 +10548,6 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{_target setVariable [""BIS_exitScript"", false];}";
 			};
 			id=333;
 			type="Target_Swivel_01_left_F";
@@ -10566,7 +10565,6 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{_target setVariable [""BIS_exitScript"", false];}";
 			};
 			id=334;
 			type="Target_Swivel_01_right_F";
@@ -12907,17 +12905,16 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5109.0151,89.009445,4176.438};
-				angles[]={0,3.1011975,0};
+				position[]={5109.0151,89.009834,4176.438};
+				angles[]={0,3.1012058,0};
 			};
 			side="Empty";
 			class Attributes
 			{
-				init="call{_target setVariable [""BIS_exitScript"", false];}";
 			};
 			id=471;
 			type="Target_Swivel_01_right_F";
-			atlOffset=0.32402039;
+			atlOffset=0.32440948;
 		};
 		class Item259
 		{
@@ -12925,12 +12922,11 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5109.9648,92.51284,4176.5078};
-				angles[]={0,3.0825398,0};
+				angles[]={0,3.0825481,0};
 			};
 			side="Empty";
 			class Attributes
 			{
-				init="call{_target setVariable [""BIS_exitScript"", false];}";
 			};
 			id=472;
 			type="Target_Swivel_01_left_F";
