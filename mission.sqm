@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5134.3677,213.63322,4653.6455};
-		dir[]={0.59790021,-0.7433154,-0.30010545};
-		up[]={0.66439527,0.66884452,-0.33348185};
-		aside[]={-0.44861269,5.9713784e-007,-0.89376795};
+		pos[]={5644.5762,368.3761,6980.8345};
+		dir[]={0.37114331,-0.72348362,0.58219224};
+		up[]={0.38895378,0.69024134,0.61012942};
+		aside[]={0.84328669,1.0301155e-006,-0.53759211};
 	};
 };
 binarizationWanted=0;
@@ -404,7 +404,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category0
+	class Category3
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -446,7 +446,7 @@ class CustomAttributes
 		};
 		nAttributes=2;
 	};
-	class Category1
+	class Category4
 	{
 		name="Scenario";
 		class Attribute0
@@ -6558,7 +6558,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="call{this setVariable[""isInstructor"", true];" \n "[this, ""uotc_loadout_west_TI"", ""Instructors 1'1""] call FNC_GearScript;" \n "[this, ""ACRE_PRC343"", 3] call FNC_SetRadio;" \n "[this, ""ACRE_PRC152"", 99] call FNC_SetRadio;}";
+						init="call{this setVariable[""isInstructor"", true];" \n "[this, ""uotc_loadout_west_TI"", ""Instructors 1'1""] call FNC_GearScript;" \n "[this, ""ACRE_PRC343"", 3] call FNC_SetRadio;" \n "[this, ""ACRE_PRC152"", 99] call FNC_SetRadio;" \n "this allowDamage false;}";
 						name="CI";
 						description="Chief Instructor@1'1";
 						isPlayable=1;
@@ -6680,7 +6680,7 @@ class Mission
 											"BOOL"
 										};
 									};
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -6715,10 +6715,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"SCALAR"
 										};
 									};
-									value="1";
+									value=0;
 								};
 							};
 						};
@@ -6743,6 +6743,25 @@ class Mission
 						};
 						class Attribute4
 						{
+							property="ace_isMedic";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2;
+								};
+							};
+						};
+						class Attribute5
+						{
 							property="acex_headless_blacklist";
 							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
 							class Value
@@ -6760,7 +6779,26 @@ class Mission
 								};
 							};
 						};
-						class Attribute5
+						class Attribute6
+						{
+							property="UO_FW_AI_unitInit";
+							expression="_propertyName = 'UO_FW_AI_unitInit'; _this setVariable [_propertyName, _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="true";
+								};
+							};
+						};
+						class Attribute7
 						{
 							property="UO_FW_ACRE_SR_RADIO_CHANNEL";
 							expression="_propertyName = 'UO_FW_ACRE_SR_RADIO_CHANNEL'; _this setVariable [_propertyName, _value];";
@@ -6772,14 +6810,14 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"SCALAR"
 										};
 									};
-									value="1";
+									value=0;
 								};
 							};
 						};
-						class Attribute6
+						class Attribute8
 						{
 							property="UO_FW_ACRE_LR_RADIO_CHANNEL";
 							expression="_propertyName = 'UO_FW_ACRE_LR_RADIO_CHANNEL'; _this setVariable [_propertyName, _value];";
@@ -6791,14 +6829,14 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"SCALAR"
 										};
 									};
-									value="1";
+									value=0;
 								};
 							};
 						};
-						nAttributes=7;
+						nAttributes=9;
 					};
 				};
 				class Item1
@@ -6814,7 +6852,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="call{this setVariable[""isInstructor"", true];" \n "[this, ""uotc_loadout_west_TI"", ""Instructors 1'1""] call FNC_GearScript;" \n "[this, ""ACRE_PRC343"", 3] call FNC_SetRadio;" \n "[this, ""ACRE_PRC152"", 99] call FNC_SetRadio;}";
+						init="call{this setVariable[""isInstructor"", true];" \n "[this, ""uotc_loadout_west_TI"", ""Instructors 1'1""] call FNC_GearScript;" \n "[this, ""ACRE_PRC343"", 3] call FNC_SetRadio;" \n "[this, ""ACRE_PRC152"", 99] call FNC_SetRadio;" \n "this allowDamage false;}";
 						name="TI2";
 						description="Training Instructor";
 						isPlayable=1;
@@ -6936,7 +6974,7 @@ class Mission
 											"BOOL"
 										};
 									};
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -6971,10 +7009,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"SCALAR"
 										};
 									};
-									value="1";
+									value=0;
 								};
 							};
 						};
@@ -6999,6 +7037,25 @@ class Mission
 						};
 						class Attribute4
 						{
+							property="ace_isMedic";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2;
+								};
+							};
+						};
+						class Attribute5
+						{
 							property="acex_headless_blacklist";
 							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
 							class Value
@@ -7016,7 +7073,26 @@ class Mission
 								};
 							};
 						};
-						class Attribute5
+						class Attribute6
+						{
+							property="UO_FW_AI_unitInit";
+							expression="_propertyName = 'UO_FW_AI_unitInit'; _this setVariable [_propertyName, _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="true";
+								};
+							};
+						};
+						class Attribute7
 						{
 							property="UO_FW_ACRE_SR_RADIO_CHANNEL";
 							expression="_propertyName = 'UO_FW_ACRE_SR_RADIO_CHANNEL'; _this setVariable [_propertyName, _value];";
@@ -7028,14 +7104,14 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"SCALAR"
 										};
 									};
-									value="1";
+									value=0;
 								};
 							};
 						};
-						class Attribute6
+						class Attribute8
 						{
 							property="UO_FW_ACRE_LR_RADIO_CHANNEL";
 							expression="_propertyName = 'UO_FW_ACRE_LR_RADIO_CHANNEL'; _this setVariable [_propertyName, _value];";
@@ -7047,14 +7123,14 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"SCALAR"
 										};
 									};
-									value="1";
+									value=0;
 								};
 							};
 						};
-						nAttributes=7;
+						nAttributes=9;
 					};
 				};
 				class Item2
@@ -7070,7 +7146,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="call{this setVariable[""isInstructor"", true];" \n "[this, ""uotc_loadout_west_TI"", ""Instructors 1'1""] call FNC_GearScript;" \n "[this, ""ACRE_PRC343"", 3] call FNC_SetRadio;" \n "[this, ""ACRE_PRC152"", 99] call FNC_SetRadio;}";
+						init="call{this setVariable[""isInstructor"", true];" \n "[this, ""uotc_loadout_west_TI"", ""Instructors 1'1""] call FNC_GearScript;" \n "[this, ""ACRE_PRC343"", 3] call FNC_SetRadio;" \n "[this, ""ACRE_PRC152"", 99] call FNC_SetRadio;" \n "this allowDamage false;}";
 						name="TI1";
 						description="Training Instructor";
 						isPlayable=1;
@@ -7192,7 +7268,7 @@ class Mission
 											"BOOL"
 										};
 									};
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -7227,10 +7303,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"SCALAR"
 										};
 									};
-									value="1";
+									value=0;
 								};
 							};
 						};
@@ -7255,6 +7331,25 @@ class Mission
 						};
 						class Attribute4
 						{
+							property="ace_isMedic";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2;
+								};
+							};
+						};
+						class Attribute5
+						{
 							property="acex_headless_blacklist";
 							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
 							class Value
@@ -7272,7 +7367,26 @@ class Mission
 								};
 							};
 						};
-						class Attribute5
+						class Attribute6
+						{
+							property="UO_FW_AI_unitInit";
+							expression="_propertyName = 'UO_FW_AI_unitInit'; _this setVariable [_propertyName, _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="true";
+								};
+							};
+						};
+						class Attribute7
 						{
 							property="UO_FW_ACRE_SR_RADIO_CHANNEL";
 							expression="_propertyName = 'UO_FW_ACRE_SR_RADIO_CHANNEL'; _this setVariable [_propertyName, _value];";
@@ -7284,14 +7398,14 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"SCALAR"
 										};
 									};
-									value="1";
+									value=0;
 								};
 							};
 						};
-						class Attribute6
+						class Attribute8
 						{
 							property="UO_FW_ACRE_LR_RADIO_CHANNEL";
 							expression="_propertyName = 'UO_FW_ACRE_LR_RADIO_CHANNEL'; _this setVariable [_propertyName, _value];";
@@ -7303,14 +7417,14 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"SCALAR"
 										};
 									};
-									value="1";
+									value=0;
 								};
 							};
 						};
-						nAttributes=7;
+						nAttributes=9;
 					};
 				};
 			};
@@ -8445,8 +8559,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							property="allowDamage";
+							expression="_this allowdamage _value;";
 							class Value
 							{
 								class data
@@ -8458,49 +8572,11 @@ class Mission
 											"BOOL"
 										};
 									};
-									value=0;
+									value=1;
 								};
 							};
 						};
 						class Attribute1
-						{
-							property="UO_FW_ACRE_LR_RADIO_CHANNEL";
-							expression="_propertyName = 'UO_FW_ACRE_LR_RADIO_CHANNEL'; _this setVariable [_propertyName, _value];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="1";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male01ENG";
-								};
-							};
-						};
-						class Attribute3
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -8519,7 +8595,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute4
+						class Attribute2
 						{
 							property="UO_FW_ACRE_PK_RADIO_CHANNEL";
 							expression="_propertyName = 'UO_FW_ACRE_PK_RADIO_CHANNEL'; _this setVariable [_propertyName, _value];";
@@ -8531,17 +8607,17 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"SCALAR"
 										};
 									};
-									value="1";
+									value=0;
 								};
 							};
 						};
-						class Attribute5
+						class Attribute3
 						{
-							property="UO_FW_ACRE_SR_RADIO_CHANNEL";
-							expression="_propertyName = 'UO_FW_ACRE_SR_RADIO_CHANNEL'; _this setVariable [_propertyName, _value];";
+							property="speaker";
+							expression="_this setspeaker _value;";
 							class Value
 							{
 								class data
@@ -8553,11 +8629,87 @@ class Mission
 											"STRING"
 										};
 									};
-									value="1";
+									value="Male01ENG";
 								};
 							};
 						};
-						nAttributes=6;
+						class Attribute4
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="UO_FW_AI_unitInit";
+							expression="_propertyName = 'UO_FW_AI_unitInit'; _this setVariable [_propertyName, _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="true";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="UO_FW_ACRE_SR_RADIO_CHANNEL";
+							expression="_propertyName = 'UO_FW_ACRE_SR_RADIO_CHANNEL'; _this setVariable [_propertyName, _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="UO_FW_ACRE_LR_RADIO_CHANNEL";
+							expression="_propertyName = 'UO_FW_ACRE_LR_RADIO_CHANNEL'; _this setVariable [_propertyName, _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=8;
 					};
 				};
 				class Item1
@@ -10429,6 +10581,25 @@ class Mission
 			{
 				class Attribute0
 				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
 					property="ObjectTextureCustom0";
 					expression="_this setObjectTextureGlobal [0,_value]";
 					class Value
@@ -10446,7 +10617,26 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute2
+				{
+					property="UO_FW_AI_unitInit";
+					expression="_propertyName = 'UO_FW_AI_unitInit'; _this setVariable [_propertyName, _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="true";
+						};
+					};
+				};
+				nAttributes=3;
 			};
 		};
 		class Item137
